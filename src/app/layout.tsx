@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Saira } from 'next/font/google'
 import './globals.css'
 import NavBar from '@/components/website/Navbar';
 import { Suspense } from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
+const saira = Saira({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'BD Store',
