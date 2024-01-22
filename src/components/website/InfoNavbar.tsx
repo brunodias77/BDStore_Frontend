@@ -7,6 +7,5 @@ export default function InfoNavBar() {
                 <button className="bg-green_600 px-5 uppercase rounded">Aproveite</button>
             </div>
         </div>
-
     )
 }
