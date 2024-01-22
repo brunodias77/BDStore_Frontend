@@ -1,8 +1,8 @@
 import InfoNavBar from "./InfoNavbar";
 
-export default function NavBar() {
+export default function Header() {
     return (
-        <div className="w-screen">
+        <div className="w-full">
             <InfoNavBar />
         </div>
     )

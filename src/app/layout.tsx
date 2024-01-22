@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { JetBrains_Mono } from 'next/font/google'
 import './globals.css'
-import NavBar from '@/components/website/Navbar';
+import Header from '@/components/website/Navbar';
 import { Suspense } from 'react';
 
-const inter = Inter({ subsets: ['latin'] })
+const myJetBrains_Mono = JetBrains_Mono({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'BD Store',
@@ -18,8 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-neutral-50 text-black selection:bg-teal-300 dark:bg-neutral-900 dark:text-white dark:selection:bg-pink-500 dark:selection:text-white">
-        <NavBar />
+      <body className={myJetBrains_Mono.className}>
+        <Header />
         <Suspense>
           <main>{children}</main>
         </Suspense>
