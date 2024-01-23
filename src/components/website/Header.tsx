@@ -4,9 +4,9 @@ import NavBar from "./NavBar";
 
 export default function Header() {
     return (
-        <div className="w-full">
+        <header className="w-full mx-auto top-0 left-0 right-0 bg-opacity-100">
             <InfoNavBar />
             <NavBar />
-        </div>
+        </header>
     )
 }

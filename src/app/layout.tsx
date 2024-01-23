@@ -3,6 +3,7 @@ import { JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/website/Header';
 import { Suspense } from 'react';
+import Footer from '@/components/website/Footer';
 
 const myJetBrains_Mono = JetBrains_Mono({ subsets: ['latin'] })
 
@@ -18,11 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={myJetBrains_Mono.className}>
+      <body className={`bg-white ${myJetBrains_Mono.className}`}>
         <Header />
         <Suspense>
           <main>{children}</main>
         </Suspense>
+        <Footer />
       </body>
     </html>
   )
