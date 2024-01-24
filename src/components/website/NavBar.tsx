@@ -3,12 +3,13 @@ import Image from "next/image";
 import LogoImg from "../../../public/BDStore.png"
 import MainNav from "./MainNav.";
 import Container from "../Ui/Container";
-import GetCategory from "@/actions/GetCategory";
+// import GetCategory from "@/actions/GetCategory";
+import GetCategoryStatic from "@/actions/GetCategoryStatic";
 
 export const revalidate = 0;
 
 const NavBar = async () => {
-    const categories = await GetCategory();
+    const categories = await GetCategoryStatic();
     return (
         <div className="border-b">
             <Container>
