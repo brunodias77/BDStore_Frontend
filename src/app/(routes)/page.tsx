@@ -1,6 +1,6 @@
 import Container from "@/components/Ui/Container";
 import getBillboardStatic from "@/actions/GetBillboardStatic";
-import Billboard from "@/components/Billboard";
+import Billboard from "@/components/website/Billboard";
 
 export const revalidate = 0;
 const HomePage = () => {
