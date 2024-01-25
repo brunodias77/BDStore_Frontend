@@ -1,34 +1,27 @@
 import Link from "next/link";
 import Image from "next/image";
 import LogoImg from "../../../public/BDStore.png"
-import { UserIcon } from "../Icons/user-icon";
-import { HeartIcon } from "../Icons/heart-icon";
-import { CartIcon } from "../Icons/cart-icon";
-import { SearchIcon } from "../Icons/search-icon";
+import MainNav from "./MainNav";
+import Container from "../Ui/Container";
+import GetCategoryStatic from "@/actions/GetCategoryStatic";
+import NavBarActions from "./NavBarActions";
+// import GetCategory from "@/actions/GetCategory";
 
-const NavBar = () => {
+export const revalidate = 0;
+
+const NavBar = async () => {
+    const categories = await GetCategoryStatic();
     return (
-        <div className="w-full py-2 border-b">
-            <div className="container mx-auto flex items-center justify-between">
-                <div className="bg-[#f3f5f6] rounded-lg py-2 px-4 flex gap-1 items-center justify-between ">
-                    <input
-                        type="text"
-                        className="bg-[#f3f5f6] outline-none	text-[#737380]"
-                        placeholder="Procurando por algo especifico?"
-                    />
-                    <SearchIcon />
-                </div>
-                <div>
+        <div className="border-b">
+            <Container>
+                <div className="relative px-4 sm:px-6 lg:px-8 h-16 flex items-center">
                     <Link href="/">
                         <Image src={LogoImg} alt="Picture of the author" height={60} />
                     </Link>
+                    <MainNav data={categories} />
+                    <NavBarActions />
                 </div>
-                <div className="flex gap-5">
-                    <UserIcon />
-                    <HeartIcon />
-                    <CartIcon />
-                </div>
-            </div>
+            </Container>
         </div>
     )
 }
