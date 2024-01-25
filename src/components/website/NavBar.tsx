@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import LogoImg from "../../../public/BDStore.png"
-import MainNav from "./MainNav.";
+import MainNav from "./MainNav";
 import Container from "../Ui/Container";
-// import GetCategory from "@/actions/GetCategory";
 import GetCategoryStatic from "@/actions/GetCategoryStatic";
+import NavBarActions from "./NavBarActions";
+// import GetCategory from "@/actions/GetCategory";
 
 export const revalidate = 0;
 
@@ -18,6 +19,7 @@ const NavBar = async () => {
                         <Image src={LogoImg} alt="Picture of the author" height={60} />
                     </Link>
                     <MainNav data={categories} />
+                    <NavBarActions />
                 </div>
             </Container>
         </div>
