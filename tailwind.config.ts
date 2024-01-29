@@ -19,11 +19,13 @@ const config: Config = {
 
         gray_100: "#F3F5F6",
         gray_200: "#E3E3E3",
+        gray_300: "#41414D",
         gray_500: "#737380",
         gray_700: "#4E4E4E",
 
         yellow_700: "#FF8F0B",
 
+        black_700: "#434343",
         black_800: "#2B2B2B",
       },
     },

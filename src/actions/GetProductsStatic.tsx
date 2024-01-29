@@ -13,7 +13,7 @@ const GetProductsStatic = (): Product[] => {
                     imageUrl: "electronic-deals.jpg",
                 },
             },
-            name: "Smartphone",
+            name: "Camiseta Levi's Graphic Set in Neck Azul Manga Curta",
             price: "599.99",
             isFeatured: true,
             size: {
