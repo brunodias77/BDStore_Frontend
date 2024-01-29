@@ -29,7 +29,7 @@ const GetProductsStatic = (): Product[] => {
             images: [
                 {
                     id: "10001",
-                    url: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone15pro-digitalmat-gallery-3-202309?wid=364&hei=333&fmt=png-alpha&.v=1693081542150",
+                    url: "https://images.unsplash.com/photo-1633966887768-64f9a867bdba?q=80&w=1403&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 },
                 {
                     id: "10002",
