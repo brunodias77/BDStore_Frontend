@@ -18,14 +18,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
     return (
         <div onClick={handleClick} className="bg-white group cursor-pointer hover:scale-105 rounded-xl space-y-4 text-center p-3 transition hover:p-3 hover:shadow">
             {/* Images and Actions */}
-            <div className="aspect-square rounded-t-md bg-gray-100 relative bg-green-400">
+            <div className="aspect-square rounded-t-md bg-gray-100 relative ">
                 <Image
                     src={data.images?.[0]?.url}
                     fill
                     alt="Image"
                     className="aspect-square object-cover rounded-t-md"
                 />
-                <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
+                <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5 ">
                     <div className="flex gap-x-6 justify-center">
                         <IconButton onClick={() => { }} icon={<Expand size={20} className="text-white" />} />
                         <IconButton onClick={() => { }} icon={<ShoppingCart size={20} className="text-white" />} />

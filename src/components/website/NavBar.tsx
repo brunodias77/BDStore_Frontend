@@ -3,7 +3,7 @@ import Image from "next/image";
 import LogoImg from "../../../public/BDStore.png"
 import MainNav from "./MainNav";
 import Container from "../Ui/Container";
-import GetCategoryStatic from "@/actions/GetCategoryStatic";
+import GetCategoryStatic from "@/actions/Static/GetCategoryStatic";
 import NavBarActions from "./NavBarActions";
 // import GetCategory from "@/actions/GetCategory";
 

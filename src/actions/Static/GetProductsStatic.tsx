@@ -1,6 +1,13 @@
 import { Product } from "@/types";
 
-const GetProductsStatic = (): Product[] => {
+interface Query {
+    categoryId?: string;
+    colorId?: string;
+    sizeId?: string;
+    isFeatured?: boolean;
+}
+
+const GetProductsStatic = (query: Query): Product[] => {
     const products: Product[] = [
         // Objeto 1
         {
@@ -34,7 +41,7 @@ const GetProductsStatic = (): Product[] => {
                 },
                 {
                     id: "10002",
-                    url: "smartphone-image2.jpg",
+                    url: "https://images.unsplash.com/photo-1633966887768-64f9a867bdba?q=80&w=1403&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 },
             ],
         },
@@ -70,7 +77,7 @@ const GetProductsStatic = (): Product[] => {
                 },
                 {
                     id: "10004",
-                    url: "jeans-image2.jpg",
+                    url: "https://images.unsplash.com/photo-1555689502-c4b22d76c56f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 },
             ],
         },
@@ -106,7 +113,7 @@ const GetProductsStatic = (): Product[] => {
                 },
                 {
                     id: "10006",
-                    url: "perfume-image2.jpg",
+                    url: "https://images.unsplash.com/photo-1587017539504-67cfbddac569?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 },
             ],
         },
@@ -142,7 +149,7 @@ const GetProductsStatic = (): Product[] => {
                 },
                 {
                     id: "10008",
-                    url: "towels-image2.jpg",
+                    url: "https://images.unsplash.com/photo-1639298109207-5a9ccc254481?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 },
             ],
         },
@@ -168,8 +175,8 @@ const GetProductsStatic = (): Product[] => {
             },
             color: {
                 id: "305",
-                name: "Gray",
-                value: "#808080",
+                name: "Red",
+                value: "#CE071C",
             },
             images: [
                 {
@@ -178,16 +185,11 @@ const GetProductsStatic = (): Product[] => {
                 },
                 {
                     id: "10010",
-                    url: "shoes-image2.jpg",
+                    url: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 },
             ],
         },
     ];
-
-    console.log(products);
-
-
-
     return products;
 };
 

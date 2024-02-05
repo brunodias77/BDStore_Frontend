@@ -1,7 +1,7 @@
 import Container from "@/components/Ui/Container";
-import getBillboardStatic from "@/actions/GetBillboardStatic";
+import getBillboardStatic from "@/actions/Static/GetBillboardStatic";
 import Billboard from "@/components/website/Billboard";
-import GetProductsStatic from "@/actions/GetProductsStatic";
+import GetProductsStatic from "@/actions/Static/GetProductsStatic";
 import ProductList from "@/components/website/ProductList";
 
 export const revalidate = 0;
