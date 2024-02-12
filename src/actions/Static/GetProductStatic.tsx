@@ -1,5 +1,4 @@
 import { Product } from "@/types";
-import GetProducts from "../GetProducts";
 import GetProductsStatic from "./GetProductsStatic";
 
 const GetProduct = (id_product: string): Product[] => {

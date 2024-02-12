@@ -7,7 +7,7 @@ interface Query {
     isFeatured?: boolean;
 }
 
-const GetProductsStatic = (query: Query): Product[] => {
+const GetProductsStatic = (query?: Query): Product[] => {
     const products: Product[] = [
         // Objeto 1
         {
