@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-white ${myJetBrains_Mono.className}`}>
-        <ModalProvider />
+        {/* <ModalProvider /> */}
         <Header />
         <Suspense>
           <main>{children}</main>

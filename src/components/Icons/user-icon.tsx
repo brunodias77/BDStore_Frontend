@@ -1,7 +1,7 @@
 import Link from "next/link";
 export function UserIcon() {
   return (
-    <Link href="/auth/login">
+    <Link href="/register">
       <svg
         width="16"
         height="19"

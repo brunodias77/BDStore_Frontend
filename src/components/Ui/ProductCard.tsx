@@ -11,7 +11,7 @@ import usePreviewModal from "@/hooks/use-preview-modal";
 interface ProductCardProps {
     data: Product;
 }
-const previewModal = usePreviewModal();
+// const previewModal = usePreviewModal();
 const onPreview: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.stopPropagation();
 }

@@ -14,7 +14,7 @@ const NavBar = async () => {
         <div className="border-b">
             <Container>
                 <div className="relative px-4 sm:px-6 lg:px-8 h-16 flex items-center">
-                    <Link href="/">
+                    <Link href="/" className="mr-auto">
                         <Image src={LogoImg} alt="Picture of the author" height={60} />
                     </Link>
                     <MainNav data={categories} />
