@@ -4,6 +4,7 @@ import './globals.css'
 import Header from '@/components/website/Header';
 import { Suspense } from 'react';
 import Footer from '@/components/website/Footer';
+import ModalProvider from '@/providers/modal-provider';
 
 const myJetBrains_Mono = JetBrains_Mono({ subsets: ['latin'] })
 
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-white ${myJetBrains_Mono.className}`}>
+        <ModalProvider />
         <Header />
         <Suspense>
           <main>{children}</main>

@@ -1,15 +1,20 @@
 "use client"
 import Image from "next/image";
-import { Product } from "@/types";
 import IconButton from "@/components/Ui/IconButton";
-import { Expand, ShoppingCart } from "lucide-react";
 import Currency from "@/components/Ui/Currency";
+import { MouseEventHandler } from "react";
+import { Product } from "@/types";
+import { Expand, ShoppingCart } from "lucide-react";
 import { useRouter } from "next/navigation";
+import usePreviewModal from "@/hooks/use-preview-modal";
 
 interface ProductCardProps {
     data: Product;
 }
-
+const previewModal = usePreviewModal();
+const onPreview: MouseEventHandler<HTMLButtonElement> = (event) => {
+    event.stopPropagation();
+}
 const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
     const router = useRouter();
     const handleClick = () => {
