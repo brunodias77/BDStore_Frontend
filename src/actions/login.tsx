@@ -4,7 +4,7 @@ import { cookies } from 'next/headers';
 
 export async function login(username: string, password: string) {
   try {
-    const response = await fetch('https://api.origamid.online/conta/login', {
+    const response = await fetch('https://localhost:7269/api/users/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -15,6 +15,8 @@ export async function login(username: string, password: string) {
       }),
     });
     const data = await response.json();
+    console.log(`estou tentando fazer o login ================================`);
+    console.log(data);
     cookies().set('token', data.token, {
       httpOnly: true,
       secure: true,
