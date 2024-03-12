@@ -15,14 +15,15 @@ export async function login(username: string, password: string) {
       }),
     });
     const data = await response.json();
-    console.log(`estou tentando fazer o login ================================`);
-    console.log(data);
-    cookies().set('token', data.token, {
+    cookies().set({
+      name: 'token',
+      value: data.accessToken,
       httpOnly: true,
       secure: true,
-    });
+    })
     return true;
   } catch (err) {
+    console.log(err);
     return false;
   }
 }

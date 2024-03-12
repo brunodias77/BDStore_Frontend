@@ -22,11 +22,15 @@ export default function RootLayout({
     <html lang="en">
       <body className={`bg-white ${myJetBrains_Mono.className}`}>
         {/* <ModalProvider /> */}
-        <Header />
-        <Suspense>
-          <main>{children}</main>
-        </Suspense>
-        <Footer />
+        <div className="flex flex-col min-h-screen md:min-h-[calc(100vh + 10rem)]">
+          <Header />
+          <Suspense>
+            <main className="flex-1">
+              {children}
+            </main>
+          </Suspense>
+          <Footer />
+        </div>
       </body>
     </html>
   )
