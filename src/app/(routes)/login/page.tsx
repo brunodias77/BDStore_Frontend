@@ -1,10 +1,9 @@
 import React from 'react';
+import LoginForm from './Form';
 
 const LoginPage = () => {
     return (
-        <div>
-            Estou no login
-        </div>
+        <LoginForm />
     );
 };
 

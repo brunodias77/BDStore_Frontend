@@ -6,16 +6,24 @@ import { cookies } from "next/headers";
 export default async function login(state: {}, formData: FormData) {
   const username = formData.get("username") as string | null;
   const password = formData.get("password") as string | null;
+  console.log("Aqui na funcao server de login ");
+  console.log("username: ", username);
+  console.log("password: ", password);
   try {
     if (!username || !password) throw new Error("Preencha os dados.");
     const { url } = USER_LOGIN();
+    console.log("url: ", url);
     const response = await fetch(url, {
       method: "POST",
-      body: formData,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
     });
+    console.log(await response.json());
     if (!response.ok) throw new Error("Senha ou usuário inválidos.");
     const data = await response.json();
-    cookies().set("token", data.token, {
+    cookies().set("token", data.accessToken, {
       httpOnly: true,
       secure: true,
       sameSite: "lax",
