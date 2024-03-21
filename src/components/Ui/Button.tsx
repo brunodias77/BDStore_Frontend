@@ -13,17 +13,30 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
 }, ref) => {
     return (
         <button
+            // className={cn(
+            //     `
+            //             p-2
+            //             w-auto
+            //             rounded
+            //             text-white
+            //             font-semibold
+            //             hover:opacity-70
+            //             transition
+            //             `,
+            //     className
+            // )}
             className={cn(
                 `
-                            w-auto
-                            rounded-full
-                            border-transparent
-                            disabled:cursor-not-allowed
-                            disabled:opacity-50
-                            text-white
-                            font-semibold
-                            hover:opacity-70
-                            transition
+                                w-auto
+                                border-transparent
+                                rounded
+                                disabled:cursor-not-allowed
+                                disabled:opacity-50
+                                text-white
+                                font-semibold
+                                hover:opacity-70
+                                transition
+                                ${disabled ? "opacity-50 cursor-wait" : ""}     
                             `,
                 className
             )}

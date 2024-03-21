@@ -1,16 +1,16 @@
 import { cn } from "@/lib/utils";
 import { MouseEventHandler } from "react";
 
-interface IconButtonProps {
-    onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
+type IconButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
     icon: React.ReactElement;
     className?: string;
-}
+};
 
-const IconButton: React.FC<IconButtonProps> = ({ onClick, className, icon }) => {
+
+const IconButton: React.FC<IconButtonProps> = ({ children, className, icon, ...props }) => {
     return (
         <button
-            onClick={onClick}
+            {...props}
             className={
                 cn("rounded-full flex items-center justify-center text-white bg-black_800 border border-2 border-green_300 hover:bg-green_300 shadow-md p-2 hover:scale-110 transition", className)
             }
