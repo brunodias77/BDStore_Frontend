@@ -28,11 +28,17 @@ const LoginForm = () => {
         data: null,
     });
     return (
-        <form action={action}>
-            <Input label='Usuario' name='username' type='email' />
-            <Input label='Senha' name='password' type='password' />
-            <ErrorMessage error={state.error} />
-            <FormButton />
+        <form action={action} className="min-h-screen bg-gray-100 flex flex-col justify-center sm:py-12">
+            <div className="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
+                <div className="bg-white shadow w-full rounded-lg divide-y divide-gray-200">
+                    <div className="px-5 py-7">
+                        <Input label='Usuario' name='username' type='email' />
+                        <Input label='Senha' name='password' type='password' />
+                        <ErrorMessage error={state.error} />
+                        <FormButton />
+                    </div>
+                </div>
+            </div>
         </form>
     );
 };
