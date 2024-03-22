@@ -12,9 +12,9 @@ function FormButton() {
     return (
         <>
             {pending ? (
-                <Button disabled={pending}>Enviando...</Button>
+                <Button classname="w-full" disabled={pending}>Enviando...</Button>
             ) : (
-                <Button >Login</Button>
+                <Button classname="w-full" >Login</Button>
             )}
         </>
     );
