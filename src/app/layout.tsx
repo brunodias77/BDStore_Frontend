@@ -3,6 +3,7 @@ import { JetBrains_Mono } from 'next/font/google'
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import './globals.css';
+import productsGet from '@/actions/products-get';
 const myJetBrains_Mono = JetBrains_Mono({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Store',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode

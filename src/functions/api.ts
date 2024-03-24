@@ -11,3 +11,9 @@ export function USER_REGISTER_POST() {
     url: API_URL + "/users/signup",
   };
 }
+
+export function PRODUCTS_GET() {
+  return {
+    url: API_URL + "/catalog/products",
+  };
+}

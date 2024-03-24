@@ -11,14 +11,15 @@ export interface Category {
 }
 
 export interface Product {
-  id: string;
-  category: Category;
   name: string;
-  price: string;
-  isFeatured: boolean;
-  size: Size;
-  color: Color;
-  images: Image[];
+  description: string;
+  active: boolean;
+  value: number;
+  dateAdded: Date;
+  image: string;
+  stock: number;
+  id: string;
+  domainEvents: any[] | null; // You can adjust the type as per your requirements
 }
 
 export interface Image {
